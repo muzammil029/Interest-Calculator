@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Calculator</title>
+</head>
+<body>
+    <div class="cointainer">
+        <h3>Enter Principal Amount</h3>
+        <input type="text" id="pr">
+        <h3>Enter Rate of Interest</h3>
+        <input type="text" id="roi">
+        <h3>Enter Years</h3>
+        <input type="text" id="yr">
+        <button class="btn"
+            onclick="calculate()">Calculate</button>
+        <br>
+        <br>
+        <span id="res">Rupees</span>
+    </div>
+    <script>
+        function calculate(){
+            var principal = 0;
+            var rate = 0;
+            var year = 0;
+            var SI = 0;
+            principal = parseInt(document.getElementById("pr").value);
+            year = parseInt(document.getElementById("yr").value);
+            rate = parseInt(document.getElementById("roi").value);
+            SI = (principal*year*rate)/100;
+            document.getElementById("res").innerHTML=SI;
+        }
+    </script>
+
+</body>
+</html>
